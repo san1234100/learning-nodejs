@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to NodeJs</h1>
+    <div id="user"></div>
+    <script>
+        
+// fetch('http://localhost:3000/').then(res=>res.json()).then(res=>console.log(res))
+
+const api = async()=>{
+   try{
+    const res = await fetch('http://localhost:3000/')
+    const userData = await res.json();
+    console.log(userData);
+   }catch(err){
+    console.log(err);
+   }
+}
+
+api()
+    </script>
+</body>
+</html>
